@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJMAL'S | Luxury Fashion, Designer Gowns & Bridal Couture</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#1f130d',      /* Deepest chocolate */
+              espresso: '#2e1c14',  /* Rich logo brown */
+              brown: '#3f271d',     /* Medium warm brown */
+              gold: '#cba052',      /* Metallic antique gold */
+              lightgold: '#dfc285', /* Soft champagne */
+              creme: '#fdfbf7',     /* Luxury off-white */
+              sand: '#f6f1e8'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Cinzel, Playfair Display & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fbf9f5;
+    }
+    .font-brand {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.12em;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f5e4ba 0%, #d4af37 50%, #aa8427 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border {
+      border-color: #dfc285;
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-dark">
+
+  <!-- ================= LUXURY TOP BAR ================= -->
+  <div class="bg-brand-dark text-brand-lightgold text-[11px] py-2 px-4 sm:px-8 border-b border-brand-brown/40 flex justify-between items-center tracking-wider font-medium">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="hidden sm:inline">Exclusive Designer Gowns & Bridal Couture • Custom Stitching Available</span>
+      <span class="sm:hidden">Bridal Couture & Designer Gowns</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:8292794750" class="hover:text-white transition flex items-center gap-1.5">
+        <i class="fa-solid fa-phone text-[10px]"></i> <span class="hidden md:inline">Call Boutique:</span> 8292794750
+      </a>
+      <span class="text-brand-brown">|</span>
+      <button onclick="requestAdminAccess()" class="text-white/80 hover:text-brand-gold transition flex items-center gap-1 text-[11px] font-semibold">
+        <i class="fa-solid fa-lock text-[10px]"></i> Admin Portal
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MAIN BRAND HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-brand-espresso text-white shadow-xl border-b border-brand-gold/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
+      
+      <!-- Logo Branding exactly as client's brand -->
+      <div class="flex items-center gap-3.5 cursor-pointer py-1" onclick="switchView('storefront')">
+        <!-- SVG recreation of Mannequin Dress Logo -->
+        <div class="w-12 h-12 rounded-full bg-gradient-to-b from-brand-brown to-brand-dark border border-brand-gold/50 flex items-center justify-center p-2 shadow-inner">
+          <svg viewBox="0 0 100 100" class="w-full h-full text-brand-gold fill-current" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 12 C52 12, 54 13.5, 54 16 C54 17.5, 53 19, 51 19.5 L51 22 C55 23, 62 26, 60 33 C58 39, 57 41, 55 45 C54 48, 54 52, 58 58 C63 65, 76 75, 80 82 C74 80, 63 78, 54 75 L54 84 C57 85, 59 87, 59 89 L41 89 C41 87, 43 85, 46 84 L46 75 C37 78, 26 80, 20 82 C24 75, 37 65, 42 58 C46 52, 46 48, 45 45 C43 41, 42 39, 40 33 C38 26, 45 23, 49 22 L49 19.5 C47 19, 46 17.5, 46 16 C46 13.5, 48 12, 50 12 Z M47 30 C49 32, 51 32, 53 30 C54 35, 52 42, 50 44 C48 42, 46 35, 47 30 Z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-brand text-2xl sm:text-3xl font-extrabold tracking-widest text-white leading-none">
+            AJMAL'S
+          </h1>
+          <p class="text-[9px] sm:text-[10px] tracking-[0.25em] text-brand-lightgold uppercase font-medium mt-1">
+            Where Style Meets Comfort
+          </p>
+        </div>
+      </div>
+
+      <!-- Desktop Search Bar -->
+      <div id="store-search-container" class="hidden md:flex flex-1 max-w-md mx-6">
+        <div class="relative w-full">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-brand-lightgold/60 text-xs"></i>
+          <input type="text" id="searchInput" placeholder="Search bridal gowns, lehengas, party suits..." 
+            oninput="handleSearch(this.value)"
+            class="w-full pl-10 pr-4 py-2.5 bg-brand-dark/70 text-brand-creme text-xs rounded-full border border-brand-gold/30 focus:border-brand-gold focus:outline-none transition-all placeholder:text-brand-lightgold/40">
+        </div>
+      </div>
+
+      <!-- Actions: Admin toggle & Cart -->
+      <div class="flex items-center gap-3">
+        <!-- View Toggle (Storefront / Admin) -->
+        <button id="toggleViewBtn" onclick="requestAdminAccess()" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-full border border-brand-gold/40 bg-brand-brown/40 text-brand-lightgold hover:text-white hover:border-brand-gold text-xs transition">
+          <i class="fa-solid fa-crown text-brand-gold text-xs"></i>
+          <span id="viewBtnText">Admin Portal</span>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button id="cartBtn" onclick="toggleCartDrawer(true)" class="relative p-2.5 rounded-full bg-brand-brown/60 hover:bg-brand-brown border border-brand-gold/40 text-brand-gold transition">
+          <i class="fa-solid fa-bag-shopping text-lg"></i>
+          <span id="cartCountBadge" class="absolute -top-1.5 -right-1.5 bg-brand-gold text-brand-dark font-extrabold text-[11px] w-5 h-5 rounded-full flex items-center justify-center shadow-lg">
+            0
+          </span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Search Bar -->
+    <div id="mobileSearchContainer" class="px-4 pb-3 md:hidden">
+      <div class="relative w-full">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-lightgold/60 text-xs"></i>
+        <input type="text" placeholder="Search gowns, lehengas, suits..." oninput="handleSearch(this.value)"
+          class="w-full pl-10 pr-4 py-2 bg-brand-dark/70 text-xs text-brand-creme rounded-full border border-brand-gold/30 focus:border-brand-gold outline-none">
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= CUSTOMER STOREFRONT VIEW ================= -->
+  <main id="storefrontView" class="flex-1">
+    
+    <!-- Hero Banner with Warm Boutique Aesthetic -->
+    <section class="relative bg-brand-espresso overflow-hidden text-brand-creme border-b border-brand-gold/30">
+      <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#dfc285_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-2xl text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-lightgold text-xs uppercase tracking-widest font-semibold mb-4">
+            <i class="fa-solid fa-gem text-[10px]"></i> Royal Bridal & Festive 2026
+          </div>
+          <h2 class="font-brand text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-white leading-tight mb-4">
+            Where Style Meets <span class="gold-gradient-text">Comfort.</span>
+          </h2>
+          <p class="text-sm sm:text-base text-brand-creme/80 font-light leading-relaxed mb-8 max-w-xl">
+            Explore handcrafted designer gowns, hand-embroidered bridal lehengas, Pakistani suits, and premium party couture. Order directly via WhatsApp or visit our boutique.
+          </p>
+          <div class="flex flex-wrap gap-3.5 justify-center md:justify-start">
+            <a href="#catalogSection" class="px-7 py-3.5 bg-gradient-to-r from-brand-gold to-brand-lightgold text-brand-dark font-bold rounded-full shadow-lg hover:brightness-110 transition text-xs sm:text-sm tracking-wider uppercase flex items-center gap-2">
+              Explore Collection <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <button onclick="filterCategory('Bridal Lehengas')" class="px-7 py-3.5 rounded-full border border-brand-gold/60 text-brand-lightgold hover:bg-brand-gold/10 transition text-xs sm:text-sm font-semibold tracking-wider">
+              Bridal Specials
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Showcase Card -->
+        <div class="w-full md:w-auto flex justify-center">
+          <div class="relative w-64 h-80 sm:w-80 sm:h-96 rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-gold/40 group">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" 
+                 alt="Luxury Bridal Dress" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-center p-3 rounded-2xl bg-brand-dark/80 backdrop-blur-md border border-brand-gold/30">
+              <span class="text-brand-lightgold font-brand text-xs font-bold uppercase tracking-wider block">Boutique Exclusive</span>
+              <p class="text-[11px] text-white/90">Custom fitting & worldwide dispatch</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Tab Strip -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-2" id="categoryChips">
+        <button onclick="filterCategory('All')" class="cat-pill active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap bg-brand-espresso text-brand-lightgold border border-brand-gold shadow-sm transition">
+          All Creations
+        </button>
+        <button onclick="filterCategory('Designer Gowns')" class="cat-pill px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white border border-slate-200 text-slate-700 hover:border-brand-gold hover:text-brand-dark transition">
+          Designer Gowns
+        </button>
+        <button onclick="filterCategory('Bridal Lehengas')" class="cat-pill px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white border border-slate-200 text-slate-700 hover:border-brand-gold hover:text-brand-dark transition">
+          Bridal Lehengas
+        </button>
+        <button onclick="filterCategory('Party Wear Suits')" class="cat-pill px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white border border-slate-200 text-slate-700 hover:border-brand-gold hover:text-brand-dark transition">
+          Party Wear Suits
+        </button>
+        <button onclick="filterCategory('Anarkali Sets')" class="cat-pill px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white border border-slate-200 text-slate-700 hover:border-brand-gold hover:text-brand-dark transition">
+          Anarkali Sets
+        </button>
+        <button onclick="filterCategory('Indo-Western')" class="cat-pill px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white border border-slate-200 text-slate-700 hover:border-brand-gold hover:text-brand-dark transition">
+          Indo-Western
+        </button>
+      </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="catalogSection" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-brand font-bold text-brand-dark">Curated Collection</h3>
+          <p id="productCountLabel" class="text-xs text-slate-500 font-medium mt-0.5">Showing luxury pieces</p>
+        </div>
+        <select id="sortBy" onchange="handleSort(this.value)" class="text-xs bg-white border border-slate-300 rounded-xl px-3 py-2 text-slate-700 focus:outline-none focus:border-brand-gold">
+          <option value="featured">Featured First</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Empty state -->
+      <div id="noProductsFound" class="hidden text-center py-16 bg-white rounded-3xl border border-dashed border-slate-200 p-8 my-6">
+        <i class="fa-solid fa-shirt text-4xl text-slate-300 mb-3"></i>
+        <h4 class="text-base font-semibold text-slate-700">No creations found</h4>
+        <p class="text-xs text-slate-500 max-w-sm mx-auto mt-1">Try another search or reset category filter to see our complete boutique range.</p>
+        <button onclick="resetFilters()" class="mt-4 px-5 py-2 bg-brand-espresso text-brand-lightgold text-xs font-semibold rounded-full shadow hover:brightness-125">
+          Show All Outfits
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= ADMIN DASHBOARD VIEW ================= -->
+  <main id="adminView" class="hidden flex-1 bg-slate-100 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Admin Header -->
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-brand-espresso text-white p-6 rounded-3xl shadow-xl border border-brand-gold/40 mb-6">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-brand-dark border border-brand-gold/40 text-brand-gold flex items-center justify-center text-xl">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div>
+            <span class="text-[10px] tracking-widest uppercase text-brand-lightgold font-bold">AJMAL'S Boutique Management</span>
+            <h2 class="text-xl sm:text-2xl font-bold font-brand">Store Admin Panel</h2>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5 w-full sm:w-auto">
+          <button onclick="openAddProductModal()" class="flex-1 sm:flex-initial px-5 py-2.5 bg-brand-gold hover:bg-brand-lightgold text-brand-dark rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow transition">
+            <i class="fa-solid fa-plus"></i> Add New Outfit
+          </button>
+          <button onclick="switchView('storefront')" class="px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-semibold flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-store"></i> Open Store
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between text-slate-400 text-xs mb-2">
+            <span class="font-bold text-slate-500 uppercase tracking-wider">Total Sales Volume</span>
+            <i class="fa-solid fa-indian-rupee-sign text-brand-gold"></i>
+          </div>
+          <div id="metricTotalSales" class="text-2xl sm:text-3xl font-bold text-brand-dark">₹0</div>
+          <span class="text-[11px] text-emerald-600 font-semibold">From WhatsApp Orders</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between text-slate-400 text-xs mb-2">
+            <span class="font-bold text-slate-500 uppercase tracking-wider">Total Orders</span>
+            <i class="fa-solid fa-receipt text-blue-600"></i>
+          </div>
+          <div id="metricTotalOrders" class="text-2xl sm:text-3xl font-bold text-slate-900">0</div>
+          <span class="text-[11px] text-slate-500 font-medium">Customer bookings</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between text-slate-400 text-xs mb-2">
+            <span class="font-bold text-slate-500 uppercase tracking-wider">Active Inventory</span>
+            <i class="fa-solid fa-vest-patches text-purple-600"></i>
+          </div>
+          <div id="metricActiveProducts" class="text-2xl sm:text-3xl font-bold text-slate-900">0</div>
+          <span class="text-[11px] text-slate-500 font-medium">Outfits on showcase</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+          <div class="flex items-center justify-between text-slate-400 text-xs mb-2">
+            <span class="font-bold text-slate-500 uppercase tracking-wider">Low Stock Outfits</span>
+            <i class="fa-solid fa-bell text-amber-500"></i>
+          </div>
+          <div id="metricLowStock" class="text-2xl sm:text-3xl font-bold text-amber-600">0</div>
+          <span class="text-[11px] text-amber-600 font-medium">Needs re-stocking</span>
+        </div>
+      </div>
+
+      <!-- Admin Tabs (Products & Orders) -->
+      <div class="bg-white rounded-3xl shadow-xs border border-slate-200 overflow-hidden mb-12">
+        <div class="border-b border-slate-200 px-6 flex gap-6 bg-slate-50">
+          <button id="adminTabProducts" onclick="switchAdminSubTab('products')" class="py-4 text-xs sm:text-sm font-bold border-b-2 border-brand-espresso text-brand-dark flex items-center gap-2">
+            <i class="fa-solid fa-boxes-stacked text-brand-gold"></i> Outfit Catalog
+          </button>
+          <button id="adminTabOrders" onclick="switchAdminSubTab('orders')" class="py-4 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2">
+            <i class="fa-solid fa-bag-shopping"></i> Customer Bookings <span id="ordersBadgeCount" class="bg-brand-espresso text-brand-lightgold text-[10px] px-2 py-0.5 rounded-full">0</span>
+          </button>
+        </div>
+
+        <!-- Products List -->
+        <div id="adminProductsContainer" class="p-4 sm:p-6">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm text-slate-600">
+              <thead class="bg-slate-50 text-slate-700 uppercase text-[10px] tracking-wider border-b border-slate-200 font-bold">
+                <tr>
+                  <th class="py-3 px-3">Outfit</th>
+                  <th class="py-3 px-3">Category</th>
+                  <th class="py-3 px-3">Price</th>
+                  <th class="py-3 px-3">Stock Units</th>
+                  <th class="py-3 px-3">Sizes</th>
+                  <th class="py-3 px-3 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductsTableBody" class="divide-y divide-slate-100">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Orders List -->
+        <div id="adminOrdersContainer" class="hidden p-4 sm:p-6">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm text-slate-600">
+              <thead class="bg-slate-50 text-slate-700 uppercase text-[10px] tracking-wider border-b border-slate-200 font-bold">
+                <tr>
+                  <th class="py-3 px-3">Order ID & Date</th>
+                  <th class="py-3 px-3">Client Details</th>
+                  <th class="py-3 px-3">Booked Outfits</th>
+                  <th class="py-3 px-3">Amount</th>
+                  <th class="py-3 px-3">Status</th>
+                  <th class="py-3 px-3 text-right">WhatsApp</th>
+                </tr>
+              </thead>
+              <tbody id="adminOrdersTableBody" class="divide-y divide-slate-100">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+          <div id="noOrdersBanner" class="hidden py-12 text-center text-slate-400">
+            <i class="fa-solid fa-clipboard-list text-3xl mb-2 text-slate-300"></i>
+            <p class="text-sm">No bookings placed yet.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= SLIDE-OVER BAG / CART DRAWER ================= -->
+  <div id="cartDrawerBackdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-brand-dark/70 backdrop-blur-xs z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  
+  <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl flex flex-col translate-x-full transition-transform duration-300">
+    <div class="p-4 bg-brand-espresso text-white flex items-center justify-between border-b border-brand-gold/30">
+      <div class="flex items-center gap-2.5">
+        <i class="fa-solid fa-bag-shopping text-brand-gold text-base"></i>
+        <h3 class="font-bold text-sm font-brand tracking-wider">Your Shopping Bag</h3>
+        <span id="cartDrawerCount" class="text-xs text-brand-lightgold">(0 items)</span>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="p-1.5 rounded-full hover:bg-white/10 text-white/80 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Items List -->
+    <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 space-y-3">
+      <!-- Injected by JS -->
+    </div>
+
+    <!-- Empty state -->
+    <div id="cartEmptyState" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+      <div class="w-16 h-16 rounded-full bg-brand-sand text-brand-brown flex items-center justify-center text-2xl mb-3">
+        <i class="fa-solid fa-shirt"></i>
+      </div>
+      <h4 class="font-bold text-brand-dark text-sm font-brand">Your Bag is Empty</h4>
+      <p class="text-xs text-slate-500 mt-1 max-w-xs">Explore AJMAL'S exquisite designer gowns & lehengas to place an order.</p>
+      <button onclick="toggleCartDrawer(false)" class="mt-4 px-6 py-2.5 bg-brand-espresso text-brand-lightgold text-xs font-semibold rounded-full hover:brightness-125">
+        Browse Collection
+      </button>
+    </div>
+
+    <!-- Footer Checkout -->
+    <div id="cartFooter" class="p-5 border-t border-slate-200 bg-slate-50 space-y-3.5">
+      <div class="space-y-1.5 text-xs text-slate-600">
+        <div class="flex justify-between">
+          <span>Bag Subtotal</span>
+          <span id="cartSubtotal" class="font-semibold text-slate-900">₹0</span>
+        </div>
+        <div class="flex justify-between text-emerald-600">
+          <span>Promotional Privilege</span>
+          <span id="cartDiscount">-₹0</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Boutique Delivery</span>
+          <span class="text-emerald-700 font-bold uppercase text-[11px]">Free Shipping</span>
+        </div>
+        <div class="flex justify-between text-base font-extrabold text-brand-dark pt-2.5 border-t border-slate-200">
+          <span>Total Payable</span>
+          <span id="cartFinalTotal" class="text-brand-brown font-black">₹0</span>
+        </div>
+      </div>
+
+      <button onclick="openCheckoutModal()" class="w-full py-3.5 bg-brand-espresso hover:bg-brand-dark text-brand-lightgold border border-brand-gold/40 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-lg transition tracking-wider uppercase">
+        <i class="fa-solid fa-lock text-xs"></i> Proceed to Order <i class="fa-solid fa-arrow-right text-xs"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= CHECKOUT & WHATSAPP MODAL ================= -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 bg-brand-dark/75 backdrop-blur-xs flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl scale-95 transition-transform duration-200 max-h-[92vh] flex flex-col" id="checkoutModalCard">
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-brand-espresso text-white">
+        <div>
+          <h3 class="font-bold text-sm font-brand tracking-wider flex items-center gap-2 text-brand-lightgold">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Direct WhatsApp Order
+          </h3>
+          <p class="text-[10px] text-white/70">Connect instantly with AJMAL'S boutique for stitching & delivery</p>
+        </div>
+        <button onclick="closeCheckoutModal()" class="text-white/70 hover:text-white p-1 rounded-full">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <form id="checkoutForm" onsubmit="handlePlaceOrder(event)" class="p-6 space-y-4 overflow-y-auto flex-1 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
+          <input type="text" id="custName" required placeholder="e.g. Shefali Patel / Mrs. Khan" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-brand-gold outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">WhatsApp Mobile No. *</label>
+            <input type="tel" id="custPhone" required placeholder="e.g. 9876543210" pattern="[0-9]{10}" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-brand-gold outline-none">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">City / Pincode *</label>
+            <input type="text" id="custPincode" required placeholder="e.g. Surat, 395003" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-brand-gold outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Delivery Address *</label>
+          <textarea id="custAddress" required rows="2" placeholder="Full residential or event delivery address" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:border-brand-gold outline-none"></textarea>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Custom Measurement / Stitching Notes (Optional)</label>
+          <input type="text" id="custNotes" placeholder="e.g. Height 5'5, sleeve lining needed, urgent delivery" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Preferred Payment</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 border border-slate-300 rounded-xl p-3 cursor-pointer hover:bg-slate-50 transition has-[:checked]:border-brand-gold has-[:checked]:bg-brand-sand/50">
+              <input type="radio" name="paymentMethod" value="UPI / Bank Transfer" checked class="text-brand-brown focus:ring-brand-gold">
+              <span class="text-xs font-semibold text-slate-800">UPI / GPay / NetBanking</span>
+            </label>
+            <label class="flex items-center gap-2 border border-slate-300 rounded-xl p-3 cursor-pointer hover:bg-slate-50 transition has-[:checked]:border-brand-gold has-[:checked]:bg-brand-sand/50">
+              <input type="radio" name="paymentMethod" value="Cash on Delivery (COD)" class="text-brand-brown focus:ring-brand-gold">
+              <span class="text-xs font-semibold text-slate-800">COD (Advance Token)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- WhatsApp Dispatch Notice -->
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-3 flex items-start gap-3 text-emerald-950">
+          <i class="fa-brands fa-whatsapp text-emerald-600 text-xl mt-0.5"></i>
+          <div>
+            <span class="font-bold">Instant Order Dispatch on WhatsApp</span>
+            <p class="text-[11px] text-emerald-700 mt-0.5">Clicking below will record your order and open WhatsApp with item details and measurements ready to send directly to AJMAL'S boutique!</p>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-bold flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Send Order to AJMAL'S WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCT QUICK VIEW MODAL ================= -->
+  <div id="quickViewModal" class="fixed inset-0 z-50 bg-brand-dark/75 backdrop-blur-xs flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl scale-95 transition-transform duration-200 max-h-[90vh] flex flex-col md:flex-row relative">
+      <button onclick="closeQuickViewModal()" class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur p-2 rounded-full text-slate-700 hover:bg-slate-200 shadow">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="w-full md:w-1/2 bg-slate-100 flex items-center justify-center p-4">
+        <img id="quickViewImg" src="" alt="Product preview" class="w-full h-80 md:h-full object-cover object-top rounded-2xl max-h-96">
+      </div>
+
+      <div class="w-full md:w-1/2 p-6 flex flex-col justify-between overflow-y-auto">
+        <div>
+          <span id="quickViewCategory" class="text-[10px] font-bold uppercase tracking-widest text-brand-espresso bg-brand-sand px-2.5 py-1 rounded-md">Category</span>
+          <h3 id="quickViewTitle" class="text-xl font-bold font-brand text-brand-dark mt-2.5">Garment Title</h3>
+          
+          <div class="flex items-baseline gap-2.5 my-3">
+            <span id="quickViewPrice" class="text-2xl font-black text-brand-espresso">₹0</span>
+            <span id="quickViewOriginalPrice" class="text-sm text-slate-400 line-through">₹0</span>
+            <span id="quickViewDiscountBadge" class="text-xs bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded">Special Offer</span>
+          </div>
+
+          <p id="quickViewDesc" class="text-xs text-slate-600 leading-relaxed mb-4">
+            Custom designer craftsmanship with intricate border embroidery, luxurious drape, and comfortable inner lining.
+          </p>
+
+          <!-- Select Size -->
+          <div class="mb-4">
+            <label class="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wider text-[11px]">Select Size:</label>
+            <div id="quickViewSizes" class="flex flex-wrap gap-2">
+              <!-- Dynamically added -->
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100">
+          <button id="quickViewAddToCartBtn" class="w-full py-3.5 bg-brand-espresso hover:bg-brand-dark text-brand-lightgold rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-md transition">
+            <i class="fa-solid fa-cart-plus"></i> Add to Bag
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADMIN PIN MODAL ================= -->
+  <div id="adminPinModal" class="fixed inset-0 z-50 bg-brand-dark/85 backdrop-blur-sm flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-sm p-6 shadow-2xl text-center border-2 border-brand-gold/40">
+      <div class="w-14 h-14 bg-brand-espresso text-brand-gold rounded-2xl flex items-center justify-center mx-auto text-xl mb-3 border border-brand-gold/40">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <h3 class="text-lg font-bold font-brand text-brand-dark">AJMAL'S Admin Access</h3>
+      <p class="text-xs text-slate-500 mt-1 mb-4">Enter security code to view orders & inventory<br><span class="text-brand-brown font-semibold">(Default PIN: 1234)</span></p>
+      
+      <form onsubmit="verifyAdminPin(event)">
+        <input type="password" id="adminPinInput" maxlength="6" autofocus placeholder="• • • •" 
+          class="w-full text-center text-3xl tracking-widest font-bold py-2.5 px-4 rounded-xl border border-slate-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none mb-3">
+        
+        <p id="pinErrorMsg" class="text-rose-600 text-xs font-semibold mb-3 hidden">Incorrect Security PIN. Try 1234.</p>
+
+        <div class="flex gap-2">
+          <button type="button" onclick="closeAdminPinModal()" class="flex-1 py-2.5 rounded-xl border border-slate-300 text-slate-600 text-xs font-semibold hover:bg-slate-100 transition">
+            Cancel
+          </button>
+          <button type="submit" class="flex-1 py-2.5 rounded-xl bg-brand-espresso text-brand-lightgold text-xs font-bold hover:brightness-125 shadow transition">
+            Unlock
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= ADD / EDIT PRODUCT MODAL ================= -->
+  <div id="productFormModal" class="fixed inset-0 z-50 bg-brand-dark/75 backdrop-blur-xs flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl max-h-[92vh] flex flex-col">
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-brand-espresso text-white">
+        <h3 id="productFormTitle" class="font-bold text-sm font-brand tracking-wider text-brand-lightgold">Add New Designer Outfit</h3>
+        <button onclick="closeProductFormModal()" class="text-white/70 hover:text-white p-1 rounded-full">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <form id="productForm" onsubmit="handleSaveProduct(event)" class="p-6 space-y-3.5 overflow-y-auto flex-1 text-xs">
+        <input type="hidden" id="editProductId">
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Outfit Title *</label>
+          <input type="text" id="prodTitle" required placeholder="e.g. Handcrafted Rose Gold Bridal Lehenga" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Category *</label>
+            <select id="prodCategory" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs bg-white">
+              <option value="Designer Gowns">Designer Gowns</option>
+              <option value="Bridal Lehengas">Bridal Lehengas</option>
+              <option value="Party Wear Suits">Party Wear Suits</option>
+              <option value="Anarkali Sets">Anarkali Sets</option>
+              <option value="Indo-Western">Indo-Western</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Available Stock *</label>
+            <input type="number" id="prodStock" min="0" required value="5" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Selling Price (₹) *</label>
+            <input type="number" id="prodPrice" required placeholder="e.g. 8499" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Original Price (₹)</label>
+            <input type="number" id="prodMrp" placeholder="e.g. 12999" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Image URL (Unsplash or direct image link)</label>
+          <input type="url" id="prodImage" required placeholder="https://images.unsplash.com/photo-..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Sizes (Comma-separated)</label>
+          <input type="text" id="prodSizes" value="S, M, L, XL, Custom" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Description & Embroidery Details</label>
+          <textarea id="prodDesc" rows="2" placeholder="Fabric type (Pure Georgette, Silk, Velvet), inner lining, dupatta..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-brand-gold outline-none text-xs"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-brand-espresso hover:bg-brand-dark text-brand-lightgold font-bold rounded-xl text-xs shadow-md transition tracking-wider uppercase">
+          Save Outfit to Catalog
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-espresso text-brand-lightgold px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 text-xs border border-brand-gold/40 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <i id="toastIcon" class="fa-solid fa-circle-check text-brand-gold text-base"></i>
+    <span id="toastMsg" class="font-medium text-white">Item updated</span>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-espresso text-brand-creme border-t-2 border-brand-gold/40 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-dark border border-brand-gold/50 flex items-center justify-center p-2">
+              <svg viewBox="0 0 100 100" class="w-full h-full text-brand-gold fill-current" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 12 C52 12, 54 13.5, 54 16 C54 17.5, 53 19, 51 19.5 L51 22 C55 23, 62 26, 60 33 C58 39, 57 41, 55 45 C54 48, 54 52, 58 58 C63 65, 76 75, 80 82 C74 80, 63 78, 54 75 L54 84 C57 85, 59 87, 59 89 L41 89 C41 87, 43 85, 46 84 L46 75 C37 78, 26 80, 20 82 C24 75, 37 65, 42 58 C46 52, 46 48, 45 45 C43 41, 42 39, 40 33 C38 26, 45 23, 49 22 L49 19.5 C47 19, 46 17.5, 46 16 C46 13.5, 48 12, 50 12 Z M47 30 C49 32, 51 32, 53 30 C54 35, 52 42, 50 44 C48 42, 46 35, 47 30 Z" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-xl font-brand font-bold text-white tracking-widest">AJMAL'S</span>
+              <p class="text-[8px] tracking-[0.2em] text-brand-lightgold uppercase">Where Style Meets Comfort</p>
+            </div>
+          </div>
+          <p class="text-xs text-brand-creme/70 leading-relaxed">
+            Exclusive boutique dedicated to premium bridal lehengas, designer evening gowns, and party couture crafted with exquisite handwork.
+          </p>
+        </div>
+
+        <!-- Column 2: Collections -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-brand-lightgold mb-3.5">Couture Collections</h4>
+          <ul class="space-y-2 text-xs text-brand-creme/80">
+            <li><a href="#" onclick="filterCategory('Designer Gowns')" class="hover:text-brand-gold transition">Designer Reception Gowns</a></li>
+            <li><a href="#" onclick="filterCategory('Bridal Lehengas')" class="hover:text-brand-gold transition">Hand-embroidered Lehengas</a></li>
+            <li><a href="#" onclick="filterCategory('Party Wear Suits')" class="hover:text-brand-gold transition">Heavy Party Wear Suits</a></li>
+            <li><a href="#" onclick="filterCategory('Anarkali Sets')" class="hover:text-brand-gold transition">Royal Anarkali Ensembles</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-brand-lightgold mb-3.5">Boutique Visit & Orders</h4>
+          <ul class="space-y-2.5 text-xs text-brand-creme/80">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-brand-gold mt-1"></i>
+              <span>AJMAL'S Designer Store, Main Fashion Market</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-gold"></i>
+              <a href="tel:8292794750" class="hover:text-white">8292794750</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+              <span>WhatsApp Orders Available Daily</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Admin Portal Access -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-brand-lightgold mb-3.5">Shop Owner</h4>
+          <p class="text-xs text-brand-creme/70 mb-3">Add fresh arrivals, edit prices, and manage order statuses directly.</p>
+          <button onclick="requestAdminAccess()" class="px-4 py-2.5 bg-brand-dark hover:bg-brand-brown border border-brand-gold/40 text-brand-lightgold text-xs font-semibold rounded-xl transition flex items-center gap-2">
+            <i class="fa-solid fa-lock text-xs"></i> Enter Admin Portal
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Developer Credit Banner -->
+      <div class="pt-6 border-t border-brand-brown/50 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-creme/60 gap-3">
+        <p>© 2026 AJMAL'S Boutique. All rights reserved.</p>
+        <p class="text-center sm:text-right text-brand-lightgold/90 font-medium">
+          Designed & Developed by <b class="text-white">Ashish Sharma</b> 
+          (Call/WhatsApp: <a href="tel:8292794750" class="text-white hover:underline">8292794750</a>)
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= APPLICATION SCRIPT ================= -->
+  <script>
+    /* -------------------------------------------------------------
+       DEFAULT CURATED PRODUCTS (AJMAL'S BOUTIQUE THEME)
+    -------------------------------------------------------------- */
+    const DEFAULT_PRODUCTS = [
+      {
+        id: 'AJ-101',
+        title: 'Rose Gold Shimmer Embroidered Reception Gown',
+        category: 'Designer Gowns',
+        price: 9499,
+        mrp: 14999,
+        stock: 4,
+        sizes: ['S', 'M', 'L', 'Custom'],
+        image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
+        desc: 'Stunning mermaid cut evening gown with cascading hand-sequin work, subtle cowl cape, and comfortable soft satin inner lining.'
+      },
+      {
+        id: 'AJ-102',
+        title: 'Royal Velvet Zardozi Bridal Lehenga Set',
+        category: 'Bridal Lehengas',
+        price: 24999,
+        mrp: 35000,
+        stock: 3,
+        sizes: ['M', 'L', 'Custom'],
+        image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80',
+        desc: 'Deep maroon micro-velvet lehenga enriched with antique gold Zardozi, dabka needlework, paired with double organza dupatta.'
+      },
+      {
+        id: 'AJ-103',
+        title: 'Dusty Lilac Peplum Party Wear Suit',
+        category: 'Party Wear Suits',
+        price: 5499,
+        mrp: 8200,
+        stock: 8,
+        sizes: ['S', 'M', 'L', 'XL'],
+        image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80',
+        desc: 'Asymmetrical peplum top with fine thread and mirror detailing, paired with embroidered flared sharara trousers.'
+      },
+      {
+        id: 'AJ-104',
+        title: 'Champagne Gold Flared Designer Ball Gown',
+        category: 'Designer Gowns',
+        price: 11999,
+        mrp: 18500,
+        stock: 2,
+        sizes: ['XS', 'S', 'M', 'L', 'Custom'],
+        image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80',
+        desc: 'Victorian-inspired silhouette with structured corset, micro-glitter tulle skirts, designed specifically for luxury parties.'
+      },
+      {
+        id: 'AJ-105',
+        title: 'Pastel Mint Georgette Anarkali Set',
+        category: 'Anarkali Sets',
+        price: 6899,
+        mrp: 9999,
+        stock: 6,
+        sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+        image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
+        desc: 'Floor-length flowy georgette Anarkali with intricate Lucknowi shadow work, pearl border, and scalloped tissue dupatta.'
+      },
+      {
+        id: 'AJ-106',
+        title: 'Wine Embroidered Indo-Western Drape Saree Gown',
+        category: 'Indo-Western',
+        price: 7999,
+        mrp: 11500,
+        stock: 5,
+        sizes: ['S', 'M', 'L', 'Custom'],
+        image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80',
+        desc: 'Pre-stitched pleated saree gown with embellished waist belt and designer cape shoulder silhouette. Effortless glamour.'
+      },
+      {
+        id: 'AJ-107',
+        title: 'Regal Ivory & Gold Threadwork Sharara Suit',
+        category: 'Party Wear Suits',
+        price: 6299,
+        mrp: 8999,
+        stock: 7,
+        sizes: ['M', 'L', 'XL'],
+        image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80',
+        desc: 'Pure chanderi silk short kurti with heavy golden zari neck embroidery and flowy kalidar tiered sharara.'
+      },
+      {
+        id: 'AJ-108',
+        title: 'Emerald Green Sequined Cocktail Gown',
+        category: 'Designer Gowns',
+        price: 8499,
+        mrp: 12999,
+        stock: 3,
+        sizes: ['S', 'M', 'L'],
+        image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
+        desc: 'Dramatic thigh-slit emerald satin gown with hand-placed shimmer work and padded neckline for impeccable fit.'
+      }
+    ];
+
+    const DEFAULT_ORDERS = [
+      {
+        id: 'AJM-2041',
+        customerName: 'Farhana Shaikh',
+        phone: '9820011223',
+        address: 'Boutique Residence, Ring Road, Surat',
+        payment: 'UPI / Bank Transfer',
+        total: 9499,
+        date: '2026-11-01',
+        items: [
+          { title: 'Rose Gold Shimmer Embroidered Reception Gown', size: 'M', qty: 1, price: 9499 }
+        ],
+        status: 'Confirmed'
+      }
+    ];
+
+    // Phone / WhatsApp for orders (Shop Owner & Developer)
+    const STORE_WHATSAPP_NUMBER = '918292794750'; 
+
+    /* -------------------------------------------------------------
+       STATE MANAGEMENT
+    -------------------------------------------------------------- */
+    let products = [];
+    let orders = [];
+    let cart = [];
+    let currentCategory = 'All';
+    let searchQuery = '';
+    let currentSort = 'featured';
+    let activeView = 'storefront';
+    let selectedQuickViewProduct = null;
+    let selectedQuickViewSize = null;
+
+    function initApp() {
+      // Products
+      const savedProducts = localStorage.getItem('ajmals_products');
+      if (savedProducts) {
+        try { products = JSON.parse(savedProducts); } catch(e) { products = [...DEFAULT_PRODUCTS]; }
+      } else {
+        products = [...DEFAULT_PRODUCTS];
+        saveProducts();
+      }
+
+      // Orders
+      const savedOrders = localStorage.getItem('ajmals_orders');
+      if (savedOrders) {
+        try { orders = JSON.parse(savedOrders); } catch(e) { orders = [...DEFAULT_ORDERS]; }
+      } else {
+        orders = [...DEFAULT_ORDERS];
+        saveOrders();
+      }
+
+      // Cart
+      const savedCart = localStorage.getItem('ajmals_cart');
+      if (savedCart) {
+        try { cart = JSON.parse(savedCart); } catch(e) { cart = []; }
+      }
+
+      renderProducts();
+      updateCartUI();
+      renderAdminDashboard();
+    }
+
+    function saveProducts() {
+      localStorage.setItem('ajmals_products', JSON.stringify(products));
+    }
+    function saveOrders() {
+      localStorage.setItem('ajmals_orders', JSON.stringify(orders));
+    }
+    function saveCart() {
+      localStorage.setItem('ajmals_cart', JSON.stringify(cart));
+    }
+
+    /* -------------------------------------------------------------
+       CATALOG DISPLAY & FILTERING
+    -------------------------------------------------------------- */
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const emptyState = document.getElementById('noProductsFound');
+      const countLabel = document.getElementById('productCountLabel');
+
+      let filtered = products.filter(p => {
+        const matchesCategory = (currentCategory === 'All') || (p.category.toLowerCase() === currentCategory.toLowerCase());
+        const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                              (p.desc && p.desc.toLowerCase().includes(searchQuery.toLowerCase()));
+        return matchesCategory && matchesSearch;
+      });
+
+      if (currentSort === 'price-low') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (currentSort === 'price-high') {
+        filtered.sort((a, b) => b.price - a.price);
+      }
+
+      countLabel.textContent = `Showing ${filtered.length} designer creations`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      grid.innerHTML = filtered.map(p => {
+        const discount = p.mrp > p.price ? Math.round(((p.mrp - p.price) / p.mrp) * 100) : 0;
+        const isOutOfStock = p.stock <= 0;
+        const isLowStock = p.stock > 0 && p.stock <= 3;
+
+        return `
+          <div class="group bg-white rounded-3xl overflow-hidden border border-slate-200/90 hover:border-brand-gold/60 hover:shadow-2xl transition-all duration-300 flex flex-col">
+            <!-- Product Image -->
+            <div class="relative overflow-hidden bg-slate-100 aspect-3/4">
+              <img src="${p.image}" alt="${p.title}" 
+                onerror="this.src='https://placehold.co/600x800/2e1c14/dfc285?text=AJMAL%27S'"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+              
+              <!-- Badges -->
+              <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 items-start">
+                ${discount > 0 ? `<span class="bg-brand-espresso/90 text-brand-lightgold border border-brand-gold/40 font-bold text-[10px] px-2.5 py-0.5 rounded-full shadow-sm">${discount}% OFF</span>` : ''}
+                ${isLowStock ? `<span class="bg-amber-600 text-white font-bold text-[10px] px-2 py-0.5 rounded-full shadow-sm">Only ${p.stock} left</span>` : ''}
+                ${isOutOfStock ? `<span class="bg-slate-900 text-white font-bold text-[10px] px-2 py-0.5 rounded-full shadow-sm">Sold Out</span>` : ''}
+              </div>
+
+              <!-- Quick View Floating Action -->
+              <button onclick="openQuickView('${p.id}')" 
+                class="absolute bottom-3 left-1/2 -translate-y-0 -translate-x-1/2 bg-white/95 backdrop-blur-md text-brand-dark text-xs font-bold px-4 py-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap hover:bg-brand-espresso hover:text-brand-lightgold border border-brand-gold/40">
+                <i class="fa-solid fa-eye mr-1"></i> Quick View
+              </button>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[9px] font-bold text-brand-brown/70 uppercase tracking-widest block">${p.category}</span>
+                <h4 class="font-bold font-brand text-brand-dark text-xs sm:text-sm line-clamp-1 mt-1 group-hover:text-brand-brown transition" title="${p.title}">
+                  ${p.title}
+                </h4>
+                
+                <div class="flex items-center gap-1 mt-2 text-[10px] text-slate-500 font-medium">
+                  <span class="text-slate-400">Sizes:</span>
+                  ${(p.sizes || []).slice(0, 4).map(s => `<span class="border border-slate-200 px-1 rounded bg-slate-50">${s}</span>`).join('')}
+                </div>
+              </div>
+
+              <!-- Price & Add -->
+              <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="text-sm sm:text-base font-extrabold text-brand-dark">₹${p.price.toLocaleString('en-IN')}</span>
+                    ${p.mrp > p.price ? `<span class="text-[11px] text-slate-400 line-through">₹${p.mrp.toLocaleString('en-IN')}</span>` : ''}
+                  </div>
+                </div>
+
+                <button onclick="quickAddToCart('${p.id}')" ${isOutOfStock ? 'disabled' : ''} 
+                  class="p-2 sm:px-3 sm:py-1.5 rounded-xl ${isOutOfStock ? 'bg-slate-200 text-slate-400 cursor-not-allowed' : 'bg-brand-espresso hover:bg-brand-dark text-brand-lightgold border border-brand-gold/30'} text-xs font-semibold flex items-center gap-1.5 transition">
+                  <i class="fa-solid fa-bag-shopping text-xs"></i>
+                  <span class="hidden sm:inline">${isOutOfStock ? 'Sold' : 'Add'}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(pill => {
+        if (pill.textContent.trim().toLowerCase().includes(cat.toLowerCase()) || 
+           (cat === 'All' && pill.textContent.trim().includes('All'))) {
+          pill.className = 'cat-pill active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap bg-brand-espresso text-brand-lightgold border border-brand-gold shadow-sm transition';
+        } else {
+          pill.className = 'cat-pill px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap bg-white border border-slate-200 text-slate-700 hover:border-brand-gold hover:text-brand-dark transition';
+        }
+      });
+      renderProducts();
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim();
+      renderProducts();
+    }
+
+    function handleSort(val) {
+      currentSort = val;
+      renderProducts();
+    }
+
+    function resetFilters() {
+      currentCategory = 'All';
+      searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      filterCategory('All');
+    }
+
+    /* -------------------------------------------------------------
+       QUICK VIEW POPUP
+    -------------------------------------------------------------- */
+    function openQuickView(productId) {
+      const p = products.find(i => i.id === productId);
+      if (!p) return;
+      selectedQuickViewProduct = p;
+      selectedQuickViewSize = p.sizes && p.sizes.length ? p.sizes[0] : 'Standard';
+
+      document.getElementById('quickViewImg').src = p.image;
+      document.getElementById('quickViewCategory').textContent = p.category;
+      document.getElementById('quickViewTitle').textContent = p.title;
+      document.getElementById('quickViewPrice').textContent = `₹${p.price.toLocaleString('en-IN')}`;
+      
+      const mrpElem = document.getElementById('quickViewOriginalPrice');
+      const discountElem = document.getElementById('quickViewDiscountBadge');
+      if (p.mrp > p.price) {
+        mrpElem.textContent = `₹${p.mrp.toLocaleString('en-IN')}`;
+        mrpElem.classList.remove('hidden');
+        const disc = Math.round(((p.mrp - p.price) / p.mrp) * 100);
+        discountElem.textContent = `${disc}% OFF`;
+        discountElem.classList.remove('hidden');
+      } else {
+        mrpElem.classList.add('hidden');
+        discountElem.classList.add('hidden');
+      }
+
+      document.getElementById('quickViewDesc').textContent = p.desc || 'Premium designer garment curated specifically for fit, comfort, and occasion elegance.';
+
+      const sizesContainer = document.getElementById('quickViewSizes');
+      sizesContainer.innerHTML = (p.sizes || ['Standard']).map(size => `
+        <button type="button" onclick="selectQuickViewSize('${size}')" 
+          class="qv-size-btn px-3 py-1.5 rounded-xl border text-xs font-semibold ${size === selectedQuickViewSize ? 'border-brand-gold bg-brand-espresso text-brand-lightgold' : 'border-slate-300 text-slate-700 hover:bg-slate-50'}">
+          ${size}
+        </button>
+      `).join('');
+
+      const addBtn = document.getElementById('quickViewAddToCartBtn');
+      if (p.stock <= 0) {
+        addBtn.disabled = true;
+        addBtn.className = "w-full py-3.5 bg-slate-300 text-slate-500 rounded-xl text-xs sm:text-sm font-bold cursor-not-allowed";
+        addBtn.innerHTML = "Currently Sold Out";
+      } else {
+        addBtn.disabled = false;
+        addBtn.className = "w-full py-3.5 bg-brand-espresso hover:bg-brand-dark text-brand-lightgold rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-md transition";
+        addBtn.innerHTML = `<i class="fa-solid fa-cart-plus"></i> Add to Bag (${selectedQuickViewSize})`;
+        addBtn.onclick = () => {
+          addToCart(p.id, selectedQuickViewSize);
+          closeQuickViewModal();
+          toggleCartDrawer(true);
+        };
+      }
+
+      const modal = document.getElementById('quickViewModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+      }, 10);
+    }
+
+    function selectQuickViewSize(size) {
+      selectedQuickViewSize = size;
+      document.querySelectorAll('.qv-size-btn').forEach(b => {
+        if (b.textContent.trim() === size) {
+          b.className = 'qv-size-btn px-3 py-1.5 rounded-xl border text-xs font-semibold border-brand-gold bg-brand-espresso text-brand-lightgold';
+        } else {
+          b.className = 'qv-size-btn px-3 py-1.5 rounded-xl border text-xs font-semibold border-slate-300 text-slate-700 hover:bg-slate-50';
+        }
+      });
+      const addBtn = document.getElementById('quickViewAddToCartBtn');
+      addBtn.innerHTML = `<i class="fa-solid fa-cart-plus"></i> Add to Bag (${size})`;
+    }
+
+    function closeQuickViewModal() {
+      const modal = document.getElementById('quickViewModal');
+      modal.classList.add('opacity-0');
+      modal.querySelector('div').classList.add('scale-95');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    /* -------------------------------------------------------------
+       CART SYSTEM
+    -------------------------------------------------------------- */
+    function quickAddToCart(productId) {
+      const p = products.find(item => item.id === productId);
+      if (!p || p.stock <= 0) return;
+      const defaultSize = (p.sizes && p.sizes.length > 0) ? p.sizes[0] : 'Standard';
+      addToCart(productId, defaultSize);
+      showToast(`Added "${p.title}" to your bag`);
+    }
+
+    function addToCart(productId, size = 'Standard') {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      const existingIndex = cart.findIndex(item => item.id === productId && item.size === size);
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          title: product.title,
+          price: product.price,
+          mrp: product.mrp,
+          image: product.image,
+          size: size,
+          qty: 1
+        });
+      }
+
+      saveCart();
+      updateCartUI();
+    }
+
+    function updateCartQuantity(index, delta) {
+      if (!cart[index]) return;
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      saveCart();
+      updateCartUI();
+    }
+
+    function removeCartItem(index) {
+      cart.splice(index, 1);
+      saveCart();
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById('cartCountBadge').textContent = totalCount;
+      document.getElementById('cartDrawerCount').textContent = `(${totalCount} items)`;
+
+      const listContainer = document.getElementById('cartItemsList');
+      const emptyState = document.getElementById('cartEmptyState');
+      const footer = document.getElementById('cartFooter');
+
+      if (cart.length === 0) {
+        listContainer.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        footer.classList.add('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      footer.classList.remove('hidden');
+
+      let subtotal = 0;
+      let totalMrp = 0;
+
+      listContainer.innerHTML = cart.map((item, index) => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+        totalMrp += (item.mrp || item.price) * item.qty;
+
+        return `
+          <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+            <img src="${item.image}" alt="${item.title}" class="w-16 h-16 rounded-xl object-cover object-top border border-slate-200">
+            <div class="flex-1 min-w-0">
+              <h4 class="text-xs font-bold text-slate-800 truncate">${item.title}</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-[10px] font-bold text-brand-dark bg-brand-sand px-1.5 py-0.5 rounded border border-brand-gold/40">Size: ${item.size}</span>
+                <span class="text-xs font-bold text-brand-dark">₹${item.price.toLocaleString('en-IN')}</span>
+              </div>
+              <div class="flex items-center gap-2 mt-2">
+                <div class="flex items-center border border-slate-300 rounded-lg bg-white">
+                  <button onclick="updateCartQuantity(${index}, -1)" class="w-6 h-6 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-l">-</button>
+                  <span class="text-xs px-2 font-bold">${item.qty}</span>
+                  <button onclick="updateCartQuantity(${index}, 1)" class="w-6 h-6 flex items-center justify-center text-slate-600 hover:bg-slate-100 rounded-r">+</button>
+                </div>
+                <button onclick="removeCartItem(${index})" class="text-[10px] text-rose-500 hover:underline">Remove</button>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-xs font-bold text-slate-900">₹${itemTotal.toLocaleString('en-IN')}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const discount = Math.max(0, totalMrp - subtotal);
+      document.getElementById('cartSubtotal').textContent = `₹${totalMrp.toLocaleString('en-IN')}`;
+      document.getElementById('cartDiscount').textContent = `-₹${discount.toLocaleString('en-IN')}`;
+      document.getElementById('cartFinalTotal').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+
+      if (open) {
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        drawer.classList.remove('translate-x-full');
+      } else {
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    /* -------------------------------------------------------------
+       CHECKOUT & DIRECT WHATSAPP BOOKING
+    -------------------------------------------------------------- */
+    function openCheckoutModal() {
+      if (cart.length === 0) return;
+      toggleCartDrawer(false);
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        document.getElementById('checkoutModalCard').classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.add('opacity-0');
+      document.getElementById('checkoutModalCard').classList.add('scale-95');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    function handlePlaceOrder(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const pincode = document.getElementById('custPincode').value.trim();
+      const address = document.getElementById('custAddress').value.trim();
+      const notes = document.getElementById('custNotes').value.trim();
+      const payment = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+      const orderTotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const orderId = 'AJM-' + Math.floor(1000 + Math.random() * 9000);
+
+      const newOrder = {
+        id: orderId,
+        customerName: name,
+        phone: phone,
+        address: `${address}, ${pincode}`,
+        payment: payment,
+        total: orderTotal,
+        date: new Date().toISOString().split('T')[0],
+        items: [...cart],
+        status: 'Pending'
+      };
+
+      // Deduct catalog stock
+      cart.forEach(cartItem => {
+        const prod = products.find(p => p.id === cartItem.id);
+        if (prod && prod.stock > 0) {
+          prod.stock = Math.max(0, prod.stock - cartItem.qty);
+        }
+      });
+      saveProducts();
+
+      orders.unshift(newOrder);
+      saveOrders();
+
+      // Formatted WhatsApp receipt with AJMAL'S branding
+      let itemLines = cart.map((item, idx) => 
+        `👗 *Item ${idx + 1}:* ${item.title}\n   • Size: ${item.size}\n   • Qty: ${item.qty}\n   • Price: ₹${item.price * item.qty}`
+      ).join('\n\n');
+
+      const whatsappText = `✨ *NEW ORDER - AJMAL'S BOUTIQUE* (#${orderId})\n` +
+        `_Where Style Meets Comfort_\n` +
+        `-----------------------------------------\n` +
+        `👤 *Client Name:* ${name}\n` +
+        `📞 *Contact:* ${phone}\n` +
+        `📍 *Address:* ${address}\n` +
+        `📮 *City/Pincode:* ${pincode}\n` +
+        `💳 *Payment Mode:* ${payment}\n` +
+        (notes ? `🧵 *Custom Stitching Notes:* ${notes}\n` : '') +
+        `-----------------------------------------\n` +
+        `🛍️ *ORDERED DESIGNER CREATIONS:*\n\n${itemLines}\n` +
+        `-----------------------------------------\n` +
+        `💎 *TOTAL PAYABLE:* ₹${orderTotal.toLocaleString('en-IN')}\n` +
+        `-----------------------------------------\n` +
+        `Please confirm outfit availability & estimated stitching/dispatch date. Thank you!`;
+
+      // Clear cart
+      cart = [];
+      saveCart();
+      updateCartUI();
+      renderProducts();
+      renderAdminDashboard();
+
+      closeCheckoutModal();
+      document.getElementById('checkoutForm').reset();
+
+      showToast(`Order #${orderId} booked! Opening WhatsApp...`);
+
+      const encodedUrl = `https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappText)}`;
+      window.open(encodedUrl, '_blank');
+    }
+
+    /* -------------------------------------------------------------
+       ADMIN PORTAL LOGIC & PIN PROTECTION
+    -------------------------------------------------------------- */
+    function requestAdminAccess() {
+      if (activeView === 'admin') {
+        switchView('storefront');
+        return;
+      }
+      const modal = document.getElementById('adminPinModal');
+      document.getElementById('adminPinInput').value = '';
+      document.getElementById('pinErrorMsg').classList.add('hidden');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        document.getElementById('adminPinInput').focus();
+      }, 10);
+    }
+
+    function closeAdminPinModal() {
+      const modal = document.getElementById('adminPinModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    function verifyAdminPin(event) {
+      event.preventDefault();
+      const pin = document.getElementById('adminPinInput').value.trim();
+      if (pin === '1234') {
+        closeAdminPinModal();
+        switchView('admin');
+        showToast('AJMAL\'S Admin Mode Unlocked');
+      } else {
+        document.getElementById('pinErrorMsg').classList.remove('hidden');
+      }
+    }
+
+    function switchView(viewName) {
+      activeView = viewName;
+      const storefrontView = document.getElementById('storefrontView');
+      const adminView = document.getElementById('adminView');
+      const viewBtnText = document.getElementById('viewBtnText');
+      const cartBtn = document.getElementById('cartBtn');
+      const storeSearch = document.getElementById('store-search-container');
+      const mobileSearch = document.getElementById('mobileSearchContainer');
+
+      if (viewName === 'admin') {
+        storefrontView.classList.add('hidden');
+        adminView.classList.remove('hidden');
+        viewBtnText.textContent = 'Customer Store';
+        cartBtn.classList.add('hidden');
+        storeSearch.classList.add('hidden');
+        mobileSearch.classList.add('hidden');
+        renderAdminDashboard();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        adminView.classList.add('hidden');
+        storefrontView.classList.remove('hidden');
+        viewBtnText.textContent = 'Admin Portal';
+        cartBtn.classList.remove('hidden');
+        storeSearch.classList.remove('hidden');
+        mobileSearch.classList.remove('hidden');
+        renderProducts();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function switchAdminSubTab(tab) {
+      const pTab = document.getElementById('adminTabProducts');
+      const oTab = document.getElementById('adminTabOrders');
+      const pCont = document.getElementById('adminProductsContainer');
+      const oCont = document.getElementById('adminOrdersContainer');
+
+      if (tab === 'products') {
+        pTab.className = "py-4 text-xs sm:text-sm font-bold border-b-2 border-brand-espresso text-brand-dark flex items-center gap-2";
+        oTab.className = "py-4 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2";
+        pCont.classList.remove('hidden');
+        oCont.classList.add('hidden');
+      } else {
+        oTab.className = "py-4 text-xs sm:text-sm font-bold border-b-2 border-brand-espresso text-brand-dark flex items-center gap-2";
+        pTab.className = "py-4 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-2";
+        oCont.classList.remove('hidden');
+        pCont.classList.add('hidden');
+      }
+    }
+
+    function renderAdminDashboard() {
+      const totalRevenue = orders.reduce((sum, o) => sum + (o.total || 0), 0);
+      const lowStockCount = products.filter(p => p.stock > 0 && p.stock <= 3).length;
+
+      document.getElementById('metricTotalSales').textContent = `₹${totalRevenue.toLocaleString('en-IN')}`;
+      document.getElementById('metricTotalOrders').textContent = orders.length;
+      document.getElementById('metricActiveProducts').textContent = products.length;
+      document.getElementById('metricLowStock').textContent = lowStockCount;
+      document.getElementById('ordersBadgeCount').textContent = orders.length;
+
+      // Product Table
+      const pTbody = document.getElementById('adminProductsTableBody');
+      pTbody.innerHTML = products.map((p) => {
+        return `
+          <tr class="hover:bg-slate-50 transition">
+            <td class="py-3 px-3 flex items-center gap-3">
+              <img src="${p.image}" class="w-10 h-10 rounded-lg object-cover border border-slate-200" onerror="this.src='https://placehold.co/100x100/2e1c14/dfc285?text=AJMAL'">
+              <div>
+                <p class="font-bold text-slate-900">${p.title}</p>
+                <span class="text-[10px] text-slate-400">SKU: ${p.id}</span>
+              </div>
+            </td>
+            <td class="py-3 px-3">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-sand text-brand-dark border border-brand-gold/30">${p.category}</span>
+            </td>
+            <td class="py-3 px-3 font-semibold text-slate-900">₹${p.price.toLocaleString('en-IN')}</td>
+            <td class="py-3 px-3">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold ${p.stock <= 3 ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}">
+                ${p.stock} units
+              </span>
+            </td>
+            <td class="py-3 px-3 text-[11px] text-slate-500">
+              ${(p.sizes || []).join(', ')}
+            </td>
+            <td class="py-3 px-3 text-right whitespace-nowrap">
+              <button onclick="openEditProductModal('${p.id}')" class="p-1.5 text-blue-600 hover:bg-blue-50 rounded-lg mr-1" title="Edit">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+              <button onclick="deleteProduct('${p.id}')" class="p-1.5 text-rose-600 hover:bg-rose-50 rounded-lg" title="Delete">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      // Orders Table
+      const oTbody = document.getElementById('adminOrdersTableBody');
+      const noOrdersBanner = document.getElementById('noOrdersBanner');
+      if (orders.length === 0) {
+        oTbody.innerHTML = '';
+        noOrdersBanner.classList.remove('hidden');
+      } else {
+        noOrdersBanner.classList.add('hidden');
+        oTbody.innerHTML = orders.map((o) => {
+          const itemsText = o.items.map(it => `${it.title} (${it.size}) × ${it.qty}`).join('<br>');
+
+          let statusColor = 'bg-amber-100 text-amber-800';
+          if (o.status === 'Confirmed') statusColor = 'bg-blue-100 text-blue-800';
+          if (o.status === 'Delivered') statusColor = 'bg-emerald-100 text-emerald-800';
+
+          return `
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-3 px-3">
+                <span class="font-bold text-slate-900">${o.id}</span>
+                <p class="text-[10px] text-slate-400">${o.date}</p>
+              </td>
+              <td class="py-3 px-3">
+                <p class="font-semibold text-slate-800">${o.customerName}</p>
+                <p class="text-[11px] text-slate-500">${o.phone}</p>
+                <p class="text-[10px] text-slate-400 max-w-xs truncate" title="${o.address}">${o.address}</p>
+              </td>
+              <td class="py-3 px-3 text-[11px] leading-tight text-slate-700">
+                ${itemsText}
+              </td>
+              <td class="py-3 px-3">
+                <span class="font-bold text-slate-900">₹${o.total.toLocaleString('en-IN')}</span>
+                <span class="block text-[10px] uppercase font-bold text-slate-400">${o.payment}</span>
+              </td>
+              <td class="py-3 px-3">
+                <select onchange="updateOrderStatus('${o.id}', this.value)" class="text-xs font-semibold px-2 py-1 rounded-lg border border-slate-300 ${statusColor} outline-none cursor-pointer">
+                  <option value="Pending" ${o.status === 'Pending' ? 'selected' : ''}>Pending</option>
+                  <option value="Confirmed" ${o.status === 'Confirmed' ? 'selected' : ''}>Confirmed</option>
+                  <option value="Delivered" ${o.status === 'Delivered' ? 'selected' : ''}>Delivered</option>
+                </select>
+              </td>
+              <td class="py-3 px-3 text-right">
+                <a href="https://wa.me/91${o.phone}?text=Hello%20${encodeURIComponent(o.customerName)},%20regarding%20your%20order%20${o.id}%20from%20AJMAL'S..." target="_blank" 
+                   class="inline-flex items-center gap-1 px-2.5 py-1.5 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 rounded-lg text-xs font-semibold">
+                  <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                </a>
+              </td>
+            </tr>
+          `;
+        }).join('');
+      }
+    }
+
+    function updateOrderStatus(orderId, newStatus) {
+      const order = orders.find(o => o.id === orderId);
+      if (order) {
+        order.status = newStatus;
+        saveOrders();
+        renderAdminDashboard();
+        showToast(`Order #${orderId} updated to ${newStatus}`);
+      }
+    }
+
+    /* -------------------------------------------------------------
+       ADD / EDIT OUTFIT
+    -------------------------------------------------------------- */
+    function openAddProductModal() {
+      document.getElementById('productForm').reset();
+      document.getElementById('editProductId').value = '';
+      document.getElementById('productFormTitle').textContent = 'Add New Designer Outfit';
+      const modal = document.getElementById('productFormModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function openEditProductModal(productId) {
+      const p = products.find(item => item.id === productId);
+      if (!p) return;
+
+      document.getElementById('editProductId').value = p.id;
+      document.getElementById('productFormTitle').textContent = 'Edit Outfit Details';
+      document.getElementById('prodTitle').value = p.title;
+      document.getElementById('prodCategory').value = p.category;
+      document.getElementById('prodStock').value = p.stock;
+      document.getElementById('prodPrice').value = p.price;
+      document.getElementById('prodMrp').value = p.mrp || p.price;
+      document.getElementById('prodImage').value = p.image;
+      document.getElementById('prodSizes').value = (p.sizes || []).join(', ');
+      document.getElementById('prodDesc').value = p.desc || '';
+
+      const modal = document.getElementById('productFormModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeProductFormModal() {
+      const modal = document.getElementById('productFormModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    function handleSaveProduct(event) {
+      event.preventDefault();
+      const id = document.getElementById('editProductId').value;
+      const title = document.getElementById('prodTitle').value.trim();
+      const category = document.getElementById('prodCategory').value;
+      const stock = parseInt(document.getElementById('prodStock').value, 10) || 0;
+      const price = parseFloat(document.getElementById('prodPrice').value) || 0;
+      const mrp = parseFloat(document.getElementById('prodMrp').value) || price;
+      const image = document.getElementById('prodImage').value.trim();
+      const rawSizes = document.getElementById('prodSizes').value.trim();
+      const desc = document.getElementById('prodDesc').value.trim();
+
+      const sizesArray = rawSizes.split(',').map(s => s.trim()).filter(s => s.length > 0);
+
+      if (id) {
+        const index = products.findIndex(p => p.id === id);
+        if (index > -1) {
+          products[index] = {
+            ...products[index],
+            title, category, stock, price, mrp, image, desc,
+            sizes: sizesArray.length ? sizesArray : ['Standard']
+          };
+          showToast(`Updated "${title}"`);
+        }
+      } else {
+        const newProduct = {
+          id: 'AJ-' + Math.floor(100 + Math.random() * 900),
+          title, category, stock, price, mrp, image, desc,
+          sizes: sizesArray.length ? sizesArray : ['Standard']
+        };
+        products.unshift(newProduct);
+        showToast(`Added "${title}" to boutique!`);
+      }
+
+      saveProducts();
+      closeProductFormModal();
+      renderAdminDashboard();
+      renderProducts();
+    }
+
+    function deleteProduct(productId) {
+      const p = products.find(item => item.id === productId);
+      if (confirm(`Remove "${p ? p.title : productId}" from catalog?`)) {
+        products = products.filter(item => item.id !== productId);
+        saveProducts();
+        renderAdminDashboard();
+        renderProducts();
+        showToast('Outfit removed from showcase');
+      }
+    }
+
+    /* -------------------------------------------------------------
+       CUSTOM TOAST NOTIFICATION
+    -------------------------------------------------------------- */
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msgElem = document.getElementById('toastMsg');
+      msgElem.textContent = message;
+
+      toast.classList.remove('opacity-0', 'translate-y-24');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-24');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3500);
+    }
+
+    window.onload = function() {
+      initApp();
+    };
+  </script>
+</body>
+</html>
